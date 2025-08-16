@@ -172,3 +172,65 @@ footer {
   padding: 30px;
   border-top: 1px solid var(--botao);
 }
+
+/* Responsividade para tablets e celulares */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    width: 90%;
+    padding: 10px;
+  }
+
+  .coluna input {
+    width: 100%;
+  }
+
+  fieldset {
+    width: 100%;
+    height: auto;
+  }
+
+  .itens-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .coluna-itens {
+    width: 100%;
+  }
+
+  .item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .pagamento-container {
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .coluna-pagamento select,
+  .botao-pagamento {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    padding: 5px;
+  }
+
+  fieldset input {
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  .item label {
+    padding: 5px 0;
+  }
+}
