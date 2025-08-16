@@ -225,6 +225,14 @@ footer {
     padding: 5px;
   }
 
+  .itens-container {
+    flex-direction: column;
+  }
+  
+  fieldset {
+    width: 90%;
+  }
+
   fieldset input {
     width: 100%;
     margin-top: 5px;
@@ -232,5 +240,22 @@ footer {
 
   .item label {
     padding: 5px 0;
+  }
+
+  /* Pagamento empilhado com 20px de distância */
+  .pagamento-container {
+    flex-direction: column;
+    gap: 20px; /* distância entre selects e botão */
+    padding: 10px;
+    align-items: flex-start;
+  }
+
+  .coluna-pagamento {
+    width: 100%;
+  }
+
+  .coluna-pagamento button {
+    width: 100%;
+    max-width: 180px;
   }
 }
