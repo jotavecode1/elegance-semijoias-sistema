@@ -2,7 +2,7 @@
 const vendaForm = document.getElementById('venda-form');
 
 // URL do seu Web App do Google Apps Script
-const scriptURL = 'https://script.google.com/macros/s/AKfycbz7b6llXZF3uQwzm6xdmtc50gYMiLZBCiVg8XURPqPvtFOWguo0Lpql7Hfreu2UAUUU/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwJ8Bp9g_iEy84BUZ-6gAUfDwZZNZvJc4xsQsQWTgqMcT4rUq2cQTZpJgjjrfYDM9C29g/exec';
 
 // Ao enviar o formulário
 vendaForm.addEventListener('submit', e => {
