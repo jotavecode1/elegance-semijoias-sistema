@@ -1,0 +1,304 @@
+:root {
+  --principal: #8257e6;
+  --terciaria: #d9ccf0;
+  --botao: #6b45c5; 
+  --bg: #f4f4f4;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+}
+
+header h1 {
+    text-align: center;
+    background: #f4f4f4;
+    color: var(--principal);
+}
+
+/* H1 apenas na tela de login */
+body.tela-login header h1 {
+    margin-top: 100px; /* ajusta a distância que quer */
+}
+
+
+
+/* Centralizar tela de login */
+#login-section {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4f4f4;
+    
+}
+
+/* Caixa de login */
+#login-section form {
+    background: var(--terciaria);
+    padding: 2rem 3rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+}
+
+
+/* Campos */
+#login-section label {
+  display: block;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 1rem;
+  color: var(--principal);
+}
+
+#login-section input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.507);
+}
+
+/* Botão */
+#login-section button {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 0.8rem;
+  background: #8257e6;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#login-section button:hover {
+  background: #6b45c5;
+}
+
+footer {
+    text-align: center;
+    background: #f4f4f4;
+    color: var(--principal);
+    padding: 10px;
+    border-top: 1px solid var(--principal);
+    padding: 30px;
+    
+}
+
+/* Cadastro de Vendas */
+
+#form-section {
+  margin-top: 35px;
+}
+
+#form-section h2 {
+  text-align: center;
+  padding: 20px;
+  color: var(--principal);
+}
+
+#venda-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  border: 1px solid #6b45c5;
+  border-radius: 10px;
+  background: #d9ccf0;
+  padding: 13px;
+}
+
+.coluna{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.coluna label{
+  color: var(--principal);
+}
+
+.coluna input {
+  width: 250px;
+  height: 30px;
+  border-radius: 8px;
+  padding: 5px;
+  border: 1px solid var(--principal);
+  color: var(--principal);
+}
+
+
+fieldset {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 550px;
+  height: 250px;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #6b45c5;
+  color: #6b45c5;
+  background: #d9ccf0;
+}
+
+.itens-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.coluna-itens {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.item {
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 15px;
+
+}
+
+.item label {
+  padding: 10px;
+  white-space: nowrap;
+  
+}
+
+select {
+  height: 30px;
+  border-radius: 8px;
+  margin-right: 10px;
+  text-align: center;
+  background: #6b45c5;
+  color: white;
+  border: none;
+}
+
+fieldset input {
+  height: 30px;
+  width: 70px;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  color: var(--principal);
+}
+
+fieldset input::placeholder {
+  color: var(--principal);
+}
+
+.pagamento-container {
+  display: flex;
+  align-items: center; /* centraliza verticalmente */
+  gap: 20px; /* espaço entre os elementos */
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+
+.coluna-pagamento {
+  margin-bottom: 50px;
+}
+
+.coluna-pagamento select {
+  height: 30px;
+  border-radius: 8px;
+  background: #6b45c5;
+  color: white;
+  border: none;
+  padding: 0 10px;
+}
+
+.botao-pagamento {
+  color: white;
+  background: var(--botao);
+  border-radius: 10px;
+  border: none;
+  height: 30px;
+  width: 90px;
+  cursor: pointer;
+}
+
+.botao-pagamento:hover {
+  background: #5a32a3; /* um tom mais escuro no hover */
+}
+
+/* Remove o contorno azul ao clicar nos campos */
+input:focus,
+select:focus {
+  outline: none;
+  border: 1px solid var(--botao);
+  box-shadow: 0 0 5px var(--botao);
+}
+
+/* Responsividade para telas menores que 768px */
+@media (max-width: 768px) {
+
+  /* H1 da tela de login um pouco menor e com margem ajustada */
+  body.tela-login header h1 {
+    margin-top: 50px;
+    font-size: 1.5rem;
+  }
+
+  /* Login */
+  #login-section form {
+    width: 90%; /* ocupa quase toda a largura da tela */
+    padding: 1.5rem;
+  }
+
+  /* Formulário de vendas */
+  #form-section .container {
+    flex-direction: column; /* empilha as colunas verticalmente */
+    width: 95%;
+  }
+
+  .coluna input {
+    width: 100%;
+  }
+
+  fieldset {
+    width: 95%;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .itens-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .coluna-itens {
+    width: 100%;
+  }
+
+  .pagamento-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .coluna-pagamento {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .coluna-pagamento select,
+  .botao-pagamento {
+    width: 100%;
+  }
+}
